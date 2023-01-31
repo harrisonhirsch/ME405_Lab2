@@ -44,8 +44,9 @@ if __name__ == '__main__':
         try:
             encoderPosSpeed = encoder1.read()
             #value2 = encoder2.read()
-            desiredDuty = controller1.run(encoderPosSpeed[2])
-            motor1.set_duty_cycle(75)
+            desiredDuty = controller1.run(encoderPosSpeed[0])
+            print(desiredDuty, encoderPosSpeed[0])
+            motor1.set_duty_cycle(30)
         except KeyboardInterrupt:
             break
     motor1.set_duty_cycle(0)
