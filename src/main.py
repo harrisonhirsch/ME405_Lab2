@@ -37,13 +37,15 @@ if __name__ == '__main__':
     
     motor1 = motor_driver.MotorDriver(pyb.Pin.cpu.A10, pyb.Pin.cpu.B4, pyb.Pin.cpu.B5, 3)
     encoder1 = encoder_reader.EncoderReader(pyb.Pin.cpu.C6, pyb.Pin.cpu.C7, 8)
-    encoder2 = encoder_reader.EncoderReader(pyb.Pin.cpu.B6, pyb.Pin.cpu.B7, 4)
+    #encoder2 = encoder_reader.EncoderReader(pyb.Pin.cpu.B6, pyb.Pin.cpu.B7, 4)
     controller1 = motor_controller.MotorController(3, 100)
+    
     while True:
         try:
-            value1 = encoder1.read()
-            value2 = encoder2.read()
-
+            encoderPosSpeed = encoder1.read()
+            #value2 = encoder2.read()
+            desiredDuty = controller1.run(encoderPosSpeed[2])
+            motor1.set_duty_cycle(75)
         except KeyboardInterrupt:
             break
     motor1.set_duty_cycle(0)
