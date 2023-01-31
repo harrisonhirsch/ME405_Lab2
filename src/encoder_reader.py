@@ -69,7 +69,6 @@ class EncoderReader:
             @return             The position of the encoder shaft and the delta position of the encoder shaft.
         """
         self.update()
-        # print(self.position, '\r')
         return self.position, self.delta
 
     def zero(self):
