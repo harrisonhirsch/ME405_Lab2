@@ -8,6 +8,7 @@
     @date                       January 31, 2023
 """
 
+class MotorController:
     """!
     @brief                      This class implements 
     @details                    This is a driver for 
