@@ -41,8 +41,10 @@ if __name__ == '__main__':
         try:
             value1 = encoder1.read()
             value2 = encoder2.read()
+<<<<<<< HEAD
             
+=======
+>>>>>>> 40528ab14900e4478c105fbd1c97be09261311ee
         except KeyboardInterrupt:
             break
-        
-     motor1.set_duty_cycle(0)       
+    motor1.set_duty_cycle(0)
