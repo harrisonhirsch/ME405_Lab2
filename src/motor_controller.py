@@ -8,6 +8,7 @@
     @date                       January 31, 2023
 """
 
+
 class MotorController:
     """!
     @brief                      This class implements 
@@ -29,7 +30,7 @@ class MotorController:
     def run(self, current_point):
         return self.Kp*(self.set_point - current_point)
     
-    def set_setpoint(self new_set_point):
+    def set_setpoint(self, new_set_point):
         self.set_point = new_set_point
         pass
     

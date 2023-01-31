@@ -10,6 +10,7 @@ import pyb
     @date                       January 31, 2023
 """
 
+
 class MotorDriver:
     """!
     @brief                      This class implements a DC motor driver for an ME405 kit.
@@ -30,22 +31,21 @@ class MotorDriver:
             @param  in2pin      The pin 2 for the  
         """  
 
-        
         print("Creating a motor driver")
         
-        self.enable_pin = en_pin 	#Seting up the enable pin, and setting it high
+        self.enable_pin = en_pin 	# Setting up the enable pin, and setting it high
         self.enable_pin.init(pyb.Pin.OUT_OD, pyb.Pin.PULL_UP)
         self.enable_pin.high()
         
-        self.input1pin = in1pin 	#Defining the pin 1 of the motor
+        self.input1pin = in1pin 	# Defining the pin 1 of the motor
         self.input1pin.init(pyb.Pin.OUT_PP)
         
-        self.input2pin = in2pin		#Defining the pin 2 of the motor
+        self.input2pin = in2pin		# Defining the pin 2 of the motor
         self.input2pin.init(pyb.Pin.OUT_PP)
         
-        self.motortimer = pyb.Timer(timer, freq=20000) 	#Seting up the timer channel for PWM signal
-        self.CCW = self.motortimer.channel(1, pyb.Timer.PWM, pin=in1pin)  #Setting up channels for motor
-        self.CW = self.motortimer.channel(2, pyb.Timer.PWM, pin=in2pin)
+        self.motortimer = pyb.Timer(timer, freq=20000) 	# Setting up the timer channel for PWM signal
+        self.CCW = self.motortimer.channel(1, pyb.Timer.PWM, pin=self.input1pin)  # Setting up channels for motor
+        self.CW = self.motortimer.channel(2, pyb.Timer.PWM, pin=self.input2pin)
 
     def set_duty_cycle(self, level):
         """!
@@ -57,14 +57,14 @@ class MotorDriver:
         """
         print(f"Setting duty cycle to {level}")
         
-        #This below section of code is for determining if the duty cycle is saturated
-        #and needs to be set to 100
+        # This below section of code is for determining if the duty cycle is saturated
+        # and needs to be set to 100
         if level > 100:
             level = 100
         elif level < -100:
             level = -100
-        #Then the sign of the level determines the direction and magnitude determines power
-        #If zero or anything else is passed in, the motor is stopped.
+        # Then the sign of the level determines the direction and magnitude determines power
+        # If zero or anything else is passed in, the motor is stopped.
         if -100 <= level < 0:
             self.CW.pulse_width_percent(-level)
             self.CCW.pulse_width_percent(0)
