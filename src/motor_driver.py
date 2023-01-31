@@ -53,7 +53,7 @@ class MotorDriver:
                                 in the opposite direction.
             @param level		A signed integer holding the duty cycle of the voltage sent to the motor
         """
-        print(f"Setting duty cycle to {level}")
+        # print(f"Setting duty cycle to {level}")
 
         # This below section of code is for determining if the duty cycle is saturated
         # and needs to be set to 100
