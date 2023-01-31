@@ -35,17 +35,11 @@ class MotorDriver:
         print("Creating a motor driver")
         # Enable pin
         self.enable_pin = pyb.Pin(en_pin, pyb.Pin.OUT_OD, pyb.Pin.PULL_UP)  # Setting up the enable pin, and setting it high
-        # self.enable_pin = en_pin 	# Setting up the enable pin, and setting it high
-        # self.enable_pin.init(pyb.Pin.OUT_OD, pyb.Pin.PULL_UP)
         self.enable_pin.high()
         # Input pin 1
         self.input1pin = pyb.Pin(in1pin, pyb.Pin.OUT_PP)  # Defining the pin 1 of the motor
-        # self.input1pin = in1pin 	# Defining the pin 1 of the motor
-        # self.input1pin.init(pyb.Pin.OUT_PP)
         # Input pin 2
         self.input2pin = pyb.Pin(in2pin, pyb.Pin.OUT_PP)  # Defining the pin 2 of the motor
-        # self.input2pin = in2pin		# Defining the pin 2 of the motor
-        # self.input2pin.init(pyb.Pin.OUT_PP)
 
         self.motortimer = pyb.Timer(timer, freq=20000)  # Setting up the timer channel for PWM signal
         self.CCW = self.motortimer.channel(1, pyb.Timer.PWM, pin=self.input1pin)  # Setting up channels for motor
