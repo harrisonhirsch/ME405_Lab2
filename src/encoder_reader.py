@@ -6,11 +6,12 @@ import pyb
     @details                    This is a driver for interfacing with Quadrature Encoders. This driver
                                 needs input parameters of the timer which is the proper timer that
                                 corresponds to the pins and the 2 channel pins which the encoder outputs.
-                                
+
     @author                     Peyton Archibald
     @author                     Harrison Hirsch
     @date                       January 31, 2023
 """
+
 
 class EncoderReader:
     """!
@@ -18,7 +19,7 @@ class EncoderReader:
         @details                This is a driver for interfacing with Quadrature Encoders. This driver
                                 needs input parameters of the timer which is the proper timer that
                                 corresponds to the pins and the 2 channel pins which the encoder outputs.
-    """    
+    """
 
     def __init__(self, pinA, pinB, timer):
         """!
@@ -28,15 +29,15 @@ class EncoderReader:
                                 the position, count, and delta variables are created and zeroed.
             @param  timer       The timer number which the encoder uses
             @param  pinA        The pin A for the encoder which channel 1 output is on
-            @param  pinB        The pin B for the encoder which channel 2 output is on. 
-        """        
+            @param  pinB        The pin B for the encoder which channel 2 output is on.
+        """
 
-        self.pinA = pinA
-        self.pinB = pinB
+        self.pinA = pyb.Pin(pinA)
+        self.pinB = pyb.Pin(pinB)
         self.encodertimer = pyb.Timer(timer, prescaler=0, period=65535)
         self.ch1 = self.encodertimer.channel(1, pyb.Timer.ENC_AB, pin=self.pinA)
         self.ch2 = self.encodertimer.channel(2, pyb.Timer.ENC_AB, pin=self.pinB)
-        
+
         self.delta = 0
         self.initialCount = 0
         self.count = 0
@@ -45,18 +46,18 @@ class EncoderReader:
     def update(self):
         """!
             @brief              Updates encoder position and delta
-            @details            update() uses the counter from the encoder to update the known position of the encoder and 
-                                check if increase in counts is greater than half of the period to ensure that the position 
+            @details            update() uses the counter from the encoder to update the known position of the encoder and
+                                check if increase in counts is greater than half of the period to ensure that the position
                                 of the encoder is acurate and does not experience an overload.
         """
-        
+
         self.initialCount = self.count
         self.count = self.encodertimer.counter()
-        self.delta = self.count-self.initialCount
+        self.delta = self.count - self.initialCount
         self.initialCount = self.count
-        if self.delta >= 65535/2:
+        if self.delta >= 65535 / 2:
             self.delta -= 65535
-        elif self.delta <= -65535/2:
+        elif self.delta <= -65535 / 2:
             self.delta += 65535
         self.position += self.delta
 
@@ -68,7 +69,7 @@ class EncoderReader:
             @return             The position of the encoder shaft and the delta position of the encoder shaft.
         """
         self.update()
-        #print(self.position, '\r')
+        # print(self.position, '\r')
         return self.position, self.delta
 
     def zero(self):
@@ -93,10 +94,12 @@ class EncoderReader:
         """
         self.position = position
         self.delta = 0
-        
+
+
 if __name__ == '__main__':
-    encoder1 = encoder_reader.EncoderReader(pyb.Pin.cpu.C6, pyb.Pin.cpu.C7, 8)
-    encoder2 = encoder_reader.EncoderReader(pyb.Pin.cpu.B6, pyb.Pin.cpu.B7, 4)
-    while True:
-        value1 = encoder1.read()
-        value2 = encoder2.read()
+    # encoder1 = encoder_reader.EncoderReader(pyb.Pin.cpu.C6, pyb.Pin.cpu.C7, 8)
+    # encoder2 = encoder_reader.EncoderReader(pyb.Pin.cpu.B6, pyb.Pin.cpu.B7, 4)
+    # while True:
+    #     value1 = encoder1.read()
+    #     value2 = encoder2.read()
+    pass

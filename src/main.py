@@ -35,9 +35,14 @@ import motor_controller
 
 if __name__ == '__main__':
     
-    motor1 = motor_driver.MotorDriver(pyb.Pin.cpu.A10, pyb.Pin.cpu.B4, pyb.Pin.cpu.B5, 3)
-    encoder1 = encoder_reader.EncoderReader(pyb.Pin.cpu.C6, pyb.Pin.cpu.C7, 8)
-    #encoder2 = encoder_reader.EncoderReader(pyb.Pin.cpu.B6, pyb.Pin.cpu.B7, 4)
+    # motor1 = motor_driver.MotorDriver(pyb.Pin.cpu.A10, pyb.Pin.cpu.B4, pyb.Pin.cpu.B5, 3)
+    # encoder1 = encoder_reader.EncoderReader(pyb.Pin.cpu.C6, pyb.Pin.cpu.C7, 8)
+    # #encoder2 = encoder_reader.EncoderReader(pyb.Pin.cpu.B6, pyb.Pin.cpu.B7, 4)
+    # controller1 = motor_controller.MotorController(.1, 8000)
+
+    motor1 = motor_driver.MotorDriver('A10', 'B4', 'B5', 3)
+    encoder1 = encoder_reader.EncoderReader('C6', 'C7', 8)
+    # encoder2 = encoder_reader.EncoderReader(pyb.Pin.cpu.B6, pyb.Pin.cpu.B7, 4)
     controller1 = motor_controller.MotorController(.1, 8000)
     
     while True:

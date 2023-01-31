@@ -1,10 +1,11 @@
 import pyb
+
 """!
     @file                       motor_driver.py
     @brief                      This class implements a DC motor driver for an ME405 kit.
     @details                    This is a driver for interfacing with a brushed DC motor through
                                 the L6206 motor "shield" or "hat" for the ME 405 kit.
-                                
+
     @author                     Peyton Archibald
     @author                     Harrison Hirsch
     @date                       January 31, 2023
@@ -28,22 +29,25 @@ class MotorDriver:
                                 for use.
             @param  en_pin      The enable pin which is used to enable the motor controler
             @param  in1pin      The pin 1 for the motor
-            @param  in2pin      The pin 2 for the  
-        """  
+            @param  in2pin      The pin 2 for the
+        """
 
         print("Creating a motor driver")
-        
-        self.enable_pin = en_pin 	# Setting up the enable pin, and setting it high
-        self.enable_pin.init(pyb.Pin.OUT_OD, pyb.Pin.PULL_UP)
+        # Enable pin
+        self.enable_pin = pyb.Pin(en_pin, pyb.Pin.OUT_OD, pyb.Pin.PULL_UP)  # Setting up the enable pin, and setting it high
+        # self.enable_pin = en_pin 	# Setting up the enable pin, and setting it high
+        # self.enable_pin.init(pyb.Pin.OUT_OD, pyb.Pin.PULL_UP)
         self.enable_pin.high()
-        
-        self.input1pin = in1pin 	# Defining the pin 1 of the motor
-        self.input1pin.init(pyb.Pin.OUT_PP)
-        
-        self.input2pin = in2pin		# Defining the pin 2 of the motor
-        self.input2pin.init(pyb.Pin.OUT_PP)
-        
-        self.motortimer = pyb.Timer(timer, freq=20000) 	# Setting up the timer channel for PWM signal
+        # Input pin 1
+        self.input1pin = pyb.Pin(in1pin, pyb.Pin.OUT_PP)  # Defining the pin 1 of the motor
+        # self.input1pin = in1pin 	# Defining the pin 1 of the motor
+        # self.input1pin.init(pyb.Pin.OUT_PP)
+        # Input pin 2
+        self.input2pin = pyb.Pin(in2pin, pyb.Pin.OUT_PP)  # Defining the pin 2 of the motor
+        # self.input2pin = in2pin		# Defining the pin 2 of the motor
+        # self.input2pin.init(pyb.Pin.OUT_PP)
+
+        self.motortimer = pyb.Timer(timer, freq=20000)  # Setting up the timer channel for PWM signal
         self.CCW = self.motortimer.channel(1, pyb.Timer.PWM, pin=self.input1pin)  # Setting up channels for motor
         self.CW = self.motortimer.channel(2, pyb.Timer.PWM, pin=self.input2pin)
 
@@ -55,8 +59,8 @@ class MotorDriver:
                                 in the opposite direction.
             @param level		A signed integer holding the duty cycle of the voltage sent to the motor
         """
-        #print(f"Setting duty cycle to {level}")
-        
+        print(f"Setting duty cycle to {level}")
+
         # This below section of code is for determining if the duty cycle is saturated
         # and needs to be set to 100
         if level > 100:
