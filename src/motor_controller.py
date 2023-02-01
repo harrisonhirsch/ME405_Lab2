@@ -38,5 +38,8 @@ class MotorController:
         self.Kp = new_Kp
         pass
     
+    def print_results(self, position_delta):
+        pass
 
-        
+    def store_data(self):
+        pass

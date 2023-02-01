@@ -15,6 +15,10 @@ import utime
 
 
 def main():
+    periodic_step_test()
+
+
+def periodic_step_test():
     motor1 = motor_driver.MotorDriver('A10', 'B4', 'B5', 3)  # Set up motor 1
     encoder1 = encoder_reader.EncoderReader('C6', 'C7', 8)  # Set up encoder 1
     setpt = 16348
@@ -37,6 +41,21 @@ def main():
         except KeyboardInterrupt:
             break
     motor1.set_duty_cycle(0)
+
+
+def step_response_test():
+    motor1 = motor_driver.MotorDriver('A10', 'B4', 'B5', 3)  # Set up motor 1
+    encoder1 = encoder_reader.EncoderReader('C6', 'C7', 8)  # Set up encoder 1
+    setpt = 16348
+    controller1 = motor_controller.MotorController(.1, setpt)  # Set up controller 1
+    startTime = utime.ticks_ms()
+    initial_val_lst = 100 * [0]
+    final_value_lst = 500 * [24000]
+    step_lst = initial_val_lst + final_value_lst
+    for value in step_lst:
+        encoderPosSpeed = encoder1.read()
+        controller1.set_setpoint(value)
+        controller1.run(encoderPosSpeed[0])
 
 
 if __name__ == '__main__':
