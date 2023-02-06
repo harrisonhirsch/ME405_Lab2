@@ -37,6 +37,8 @@ class MotorController:
     def set_Kp(self, new_Kp):
         self.Kp = new_Kp
         pass
-    
 
-        
+    def store_data(self, data_lst, time, position):
+        dataPt = [time, position]
+        data_lst.append(dataPt)
+        return data_lst
