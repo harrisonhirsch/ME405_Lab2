@@ -20,7 +20,7 @@ def main():
                 data = ser.readline().strip(b'\n').split(b', ')
                 data_list_x.append(float(data[0]))
                 data_list_y.append(float(data[1]))
-                if data_list_x[len(data_list_x)-1] > 6000:
+                if len(data_list_x) == 600:
                     break
             else:
                 time.sleep(0.01)
