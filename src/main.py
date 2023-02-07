@@ -2,6 +2,7 @@ import motor_driver
 import encoder_reader
 import motor_controller
 import utime
+import pyb
 
 """!
     @file                       main.py
@@ -17,6 +18,10 @@ import utime
 def main():
     # periodic_step_test()
     step_response_test()
+
+    # for number in range(10):  # Just some example output
+    #     u2.write(f"Count: {number}\r\n")  # The "\r\n" is end-of-line stuff
+    #     number += 1
 
 
 def periodic_step_test():
@@ -55,6 +60,7 @@ def step_response_test():
         else:
             raise ValueError('Input must be a number')
         controller1 = motor_controller.MotorController(Kp_input, setpt)  # Set up controller 1
+        u2 = pyb.UART(2, baudrate=115200)  # Set up the second USB-serial port
         startTime = utime.ticks_ms()
         currTime = 0
         initial_val_lst = 100 * [0]
@@ -72,7 +78,7 @@ def step_response_test():
             controller1.store_data(storedData, currTime, currPos)
             utime.sleep_ms(10)
         for dataPt in storedData:
-            print(f'{dataPt[0]}, {dataPt[1]}')
+            u2.write(f'{dataPt[0]}, {dataPt[1]}\n')
 
 
 def is_number(pt):          # Helper function to test if number
