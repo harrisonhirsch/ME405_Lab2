@@ -12,24 +12,14 @@ def main():
         # line = 0
         while True:
             if ser.inWaiting() > 0:
-                # line = str(ser.readline())
-                # line = line.replace('\\n', '')
-                # line = line.split(',')
-                # data_list.append(line)
-                # print(line)
                 data = ser.readline().strip(b'\n').split(b', ')
                 data_list_x.append(float(data[0]))
                 data_list_y.append(float(data[1]))
-                if len(data_list_x) == 600:
+                if len(data_list_x) >= 600:
                     break
             else:
                 time.sleep(0.01)
     print('checkpoint')
-    # print(data_list_y)
-    # fig, graph = plt.subplots()
-    # graph.plot(data_list_x, data_list_y, 'r-')
-    # graph.set_xlabel('Time [ms]')
-    # graph.set_ylabel('Position [encoder counts]')
     plt.plot(data_list_x, data_list_y, 'r-')
     plt.xlabel('Time [ms]')
     plt.ylabel('Position [encoder counts]')
