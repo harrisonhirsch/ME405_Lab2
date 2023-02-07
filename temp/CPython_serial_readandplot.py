@@ -23,6 +23,7 @@ def main():
     plt.plot(data_list_x, data_list_y, 'r-')
     plt.xlabel('Time [ms]')
     plt.ylabel('Position [encoder counts]')
+    plt.annotate(f'Steady State: {data_list_y[len(data_list_y)-1]} Counts', xy=(data_list_x[len(data_list_x)-1], data_list_y[len(data_list_y)-1]))
     plt.show()
 
 

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d47c01-a796-4ffe-beb6-fa60b541632a" name="Changes" comment="Delete comments">
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/CPython_serial_readandplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/CPython_serial_readandplot.py" afterDir="false" />
+    <list default="true" id="34d47c01-a796-4ffe-beb6-fa60b541632a" name="Changes" comment="Strip \r\n">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +28,19 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Flash main.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main.py" runReplOnSuccess="no">
+      <module name="ME405_Lab2" />
+      <method v="2">
+        <option name="MicroPython.StopREPL.Before.Run" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="MicroPython.Flash main.py" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,7 +57,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675804286702</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Strip \r\n">
+      <created>1675804508479</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675804508479</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -61,6 +80,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Delete comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete comments" />
+    <MESSAGE value="Strip \r\n" />
+    <option name="LAST_COMMIT_MESSAGE" value="Strip \r\n" />
   </component>
 </project>
