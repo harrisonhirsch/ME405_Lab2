@@ -78,7 +78,7 @@ def step_response_test():
             controller1.store_data(storedData, currTime, currPos)
             utime.sleep_ms(10)
         for dataPt in storedData:
-            u2.write(f'{dataPt[0]}, {dataPt[1]}\n')
+            u2.write(f'{dataPt[0]}, {dataPt[1]}\r\n')
 
 
 def is_number(pt):          # Helper function to test if number

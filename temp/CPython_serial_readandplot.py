@@ -12,7 +12,7 @@ def main():
         # line = 0
         while True:
             if ser.inWaiting() > 0:
-                data = ser.readline().strip(b'\n').split(b', ')
+                data = ser.readline().strip(b'\r\n').split(b', ')
                 data_list_x.append(float(data[0]))
                 data_list_y.append(float(data[1]))
                 if len(data_list_x) >= 600:
