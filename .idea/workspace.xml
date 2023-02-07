@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d47c01-a796-4ffe-beb6-fa60b541632a" name="Changes" comment="Add type and index checking">
-      <change beforePath="$PROJECT_DIR$/temp/CPython_serial_readandplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/CPython_serial_readandplot.py" afterDir="false" />
+    <list default="true" id="34d47c01-a796-4ffe-beb6-fa60b541632a" name="Changes" comment="Position ss value 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/motor_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/motor_controller.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675805826761</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Position ss value">
+      <created>1675806085081</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675806085081</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Position ss value 2">
+      <created>1675806199128</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675806199128</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +112,8 @@
     <MESSAGE value="Strip \r\n" />
     <MESSAGE value="Label ss value" />
     <MESSAGE value="Add type and index checking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add type and index checking" />
+    <MESSAGE value="Position ss value" />
+    <MESSAGE value="Position ss value 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Position ss value 2" />
   </component>
 </project>
