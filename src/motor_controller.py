@@ -39,7 +39,7 @@ class MotorController:
             @return                 The output of the control system. For a motor, it is a duty cycle to send to the
                                     motor driver
         """
-        return self.Kp*(self.set_point - current_point)
+        return self.Kp*(self.set_point - current_point)     # Duty cycle = gain*(setpoint-current position)
     
     def set_setpoint(self, new_set_point):
         """!
@@ -47,7 +47,7 @@ class MotorController:
             @details                Replaces the previously defined setpoint with a newly defined setpoint
             @param  new_set_point   The new setpoint of the system
         """
-        self.set_point = new_set_point
+        self.set_point = new_set_point      # Redefine setpoint
         pass
     
     def set_Kp(self, new_Kp):
@@ -56,10 +56,21 @@ class MotorController:
             @details            Replaces the previously defined gain with a newly defined gain
             @param  new_Kp      The new gain of the system
         """
-        self.Kp = new_Kp
+        self.Kp = new_Kp        # Redefine Kp
         pass
 
     def store_data(self, data_lst, time, position):
-        dataPt = [time, position]
-        data_lst.append(dataPt)
-        return data_lst
+        """!
+            @brief                  Stores data from a control algorithm
+            @details                Stores time and position data from a control algorithm that has been run in a single
+                                    variable, which can be called in later operations. This method is meant to be put in
+                                    a loop and iterated over, feeding the data_lst output back in as an input. This
+                                    creates a growing list of data points as a system is run.
+            @param  data_lst        The list that will have the data in it
+            @param  time            The current time of the system
+            @param  position        The current position of the system
+            @return                 The data stored as a list of lists
+        """
+        dataPt = [time, position]       # Create data point from time and position
+        data_lst.append(dataPt)         # Append to output list
+        return data_lst                 # Return output list

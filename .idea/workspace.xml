@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d47c01-a796-4ffe-beb6-fa60b541632a" name="Changes" comment="Position ss value 2">
+    <list default="true" id="34d47c01-a796-4ffe-beb6-fa60b541632a" name="Changes" comment="Doxygen strings ~1/2 done">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_7_2023_1_15_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_7_2023_1_15_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_7_2023_1_37_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_7_2023_1_37_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_7_2023_1_41_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_7_2023_1_41_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_7_2023_1_43_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_7_2023_1_43_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/encoder_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/encoder_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/motor_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/motor_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/CPython_serial_readandplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp/CPython_serial_readandplot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,14 +28,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/parch/OneDrive/Documents/GitHub/ME405_Lab2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/parch/OneDrive/Documents/GitHub/ME405_Lab2",
+    "settings.editor.selected.configurable": "com.jetbrains.micropython.configurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Flash main.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main.py" runReplOnSuccess="no">
       <module name="ME405_Lab2" />
@@ -93,7 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675806199128</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Doxygen strings ~1/2 done">
+      <created>1675809039098</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675809039098</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Doxygen strings ~1/2 done">
+      <created>1675809136448</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675809136448</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +135,7 @@
     <MESSAGE value="Add type and index checking" />
     <MESSAGE value="Position ss value" />
     <MESSAGE value="Position ss value 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Position ss value 2" />
+    <MESSAGE value="Doxygen strings ~1/2 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doxygen strings ~1/2 done" />
   </component>
 </project>
