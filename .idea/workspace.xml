@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="34d47c01-a796-4ffe-beb6-fa60b541632a" name="Changes" comment="Doxygen strings ~1/2 done">
+=======
+    <list default="true" id="34d47c01-a796-4ffe-beb6-fa60b541632a" name="Changes" comment="Label ss value">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +25,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/parch/OneDrive/Documents/GitHub/ME405_Lab2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.micropython.configurable&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/parch/OneDrive/Documents/GitHub/ME405_Lab2/README.md",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+>>>>>>> Stashed changes
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Flash main.py" type="MicroPythonConfigurationType" factoryName="MicroPython" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/main.py" runReplOnSuccess="no">
       <module name="ME405_Lab2" />
@@ -71,6 +85,7 @@
       <option name="project" value="LOCAL" />
       <updated>1675805159160</updated>
     </task>
+<<<<<<< Updated upstream
     <task id="LOCAL-00004" summary="Add type and index checking">
       <created>1675805826761</created>
       <option name="number" value="00004" />
@@ -107,6 +122,9 @@
       <updated>1675809136448</updated>
     </task>
     <option name="localTasksCounter" value="9" />
+=======
+    <option name="localTasksCounter" value="4" />
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,10 +142,14 @@
     <MESSAGE value="Delete comments" />
     <MESSAGE value="Strip \r\n" />
     <MESSAGE value="Label ss value" />
+<<<<<<< Updated upstream
     <MESSAGE value="Add type and index checking" />
     <MESSAGE value="Position ss value" />
     <MESSAGE value="Position ss value 2" />
     <MESSAGE value="Doxygen strings ~1/2 done" />
     <option name="LAST_COMMIT_MESSAGE" value="Doxygen strings ~1/2 done" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="Label ss value" />
+>>>>>>> Stashed changes
   </component>
 </project>
