@@ -38,15 +38,22 @@ paragraph explaining the controller. Below, we can see the results.
 This first graph shows a step response of a Kp that is set too high. This value
 being too high results in too fast of a reaction and causes excessive oscillation
 of the system. Kp = 0.5
+
 ![Excessive Oscillation from too high Kp, Kp = 0.5](Kp0_5.png)
+
 We can produce a better system reaction by lowering the Kp from this point. Below 
 we can see that now, the system settles, though there is still some overshoot 
 present. Kp = 0.01
+
 ![Approaching Better Performance, Kp = 0.01](Kp0_01.png)
+
 Lowering it further, we produce the best response. There is a little overshoot, but
 the system eventually settles to a desired value. There is some steady state error.
 Kp = 0.005
+
 ![Best Performance Achieved, Kp = 0.005](Kp0_005.png)
+
 Lowering it further, we produce a system that is too slow, as seen below. We have left ideal behavior 
 and are back to non-ideal behavior. To fix this, we need to raise the Kp. Kp = 0.001
+
 ![Too Low Kp Response too slow, Kp = 0.001](Kp0_001.png)
